@@ -1,0 +1,40 @@
+<style>
+    table{
+        border: 2px solid black;
+        padding: 1vw;
+        text-align: center;
+        margin: 5% auto;
+    }
+    tr{
+        border: 2px solid black;
+        padding: 1vw;
+    }
+    th{
+        border: 2px solid black;
+        padding: 1vw;
+    }
+    td{
+        border: 2px solid black;
+        padding: 1vw;
+    }
+
+</style>
+<h1 style="text-align: center;">My Attendance Report</h1>
+<table>
+    <tr>
+        <th>Sr</th>
+        <th>Date</th>
+        <th>Sign In</th>
+        <th>Sign Out</th>
+    </tr>
+    <% if(record.length > 0){ %>
+        <% record.forEach((data)=>{; %>
+            <tr>
+                <td><%= a = a+1 %></td>
+                <td><%= data.udate %></td>
+                <td><%= data.usignin %></td>
+                <td><%= data.usignout %></td>
+            </tr>
+        <% }) %>
+    <% } %>
+</table>

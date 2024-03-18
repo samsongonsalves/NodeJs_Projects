@@ -1,0 +1,39 @@
+<style>
+  *{
+    background-color: bisque;
+  }
+form{
+  border: 1px solid black; 
+  height: 64%;
+  width:  25%; 
+  padding: 2%;
+  margin: 6% auto;
+  background-color: rgb(148, 148, 148);
+  color: white;
+  }
+  div{
+    margin: 0% 10%;
+    background-color: transparent;
+  }
+  input{
+    margin: 2% 10%;
+    height: 10%;
+    width: 80%;
+    background-color: white;
+  }
+  button{
+    width:80%;
+    margin: 4% 10%;
+    height: 12%;
+  }
+</style>
+<form action="/signup" method="post">
+  <h1 style="text-align: center; background-color: transparent;">Sign Up</h1>
+  <div>Name:</div>
+  <input type="text" name="username" required>
+  <div>Email:</div>
+  <input type="email" name="useremail" required>
+  <div>Password:</div>
+  <input type="password" name="userpassword" required>
+  <button type="submit">Sign Up</button>
+</form>

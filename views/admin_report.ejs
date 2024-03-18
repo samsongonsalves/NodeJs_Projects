@@ -1,0 +1,43 @@
+<style>
+    table{
+        border: 2px solid black;
+        padding: 1vw;
+        text-align: center;
+        margin: 5% auto;
+    }
+    tr{
+        border: 2px solid black;
+        padding: 1vw;
+    }
+    th{
+        border: 2px solid black;
+        padding: 1vw;
+    }
+    td{
+        border: 2px solid black;
+        padding: 1vw;
+    }
+
+</style>
+<h1 style="text-align: center;">Admin Report</h1>
+<table>
+    <tr>
+        <th>Sr.no</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Registration Date</th>
+        <th>Registration Time</th>
+        
+    </tr>
+    <% if(record.length > 0){ %>
+        <% record.forEach((data)=>{; %>
+            <tr>
+                <td><%= a = a+1 %></td>
+                <td><%= data.userName %></td>
+                <td><%= data.userEmail %></td>
+                <td><%= data.userDate %></td>
+                <td><%= data.userTime %></td>
+            </tr>
+        <% }) %>
+    <% } %>
+</table>

@@ -1,0 +1,62 @@
+<style>
+*{
+    background-color: bisque;
+}
+form{
+    border: 1px solid black; 
+    height: 60%;
+    width:  25%; 
+    padding: 2%;
+    margin: 7% auto;
+    background-color: rgb(148, 148, 148);
+    color: white;  
+}
+div{
+    margin: 0% 10%;
+    background-color: transparent;
+}
+input{
+    margin: 2% 10%;
+    height: 10%;
+    width: 80%;
+    background-color: white;
+}
+button{
+    width:80%;
+    margin: 4% 10%;
+    height: 12%;
+}
+a{
+    text-align: center;
+    display: block;background-color: transparent;
+    text-decoration: none;
+    font-size: 2.4vw;
+    color:white;
+
+}
+</style>
+
+<%var date = new Date();%>
+<%var current_time = date.getHours()+":"+date.getMinutes()+":"+ date.getSeconds();%>
+<%var current_date = date.getDate()+"-"+date.getMonth()+"-"+ date.getFullYear();%>
+
+<form action="attendance" method="post">
+    <h1 style="text-align: center;background-color: transparent;">Welcome</h1>
+    <div>Sign In</div>
+    <input type="submit" name="signin" value=<%= current_time%>>
+    <div>Sign Out</div>
+    <input type="submit" name="signout" value=<%= current_time%>>
+    <a href="./user_report">View Report</a>
+</form>
+<!-- <h1 style="text-align: center;background-color: transparent;">Attendance</h1>
+<form action="/attend" method="post">
+    <button type="submit" name="signin" value="signin">SIGN IN</button>
+</form>
+
+<form action="/attend" method="post">
+    <input type="submit" name="signout" value="signout">
+</form>
+
+<form action="/user_report" method="post">
+    <button type="submit">View Report</button>
+</form> -->
